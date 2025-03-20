@@ -1,0 +1,45 @@
+# Main.ps1
+
+# Import modules
+. .\modules\InputModule.ps1
+. .\modules\ProcessingModule.ps1
+. .\modules\OutputAlertModule.ps1
+. .\modules\ConfigurationModule.ps1
+. .\modules\ErrorHandlingModule.ps1
+
+try {
+    # Load configuration
+    $config = Import-Config -ConfigFile "config.json"
+
+    # Input Module
+    $logFiles = Get-LogFiles -LogDirectory $config.LogDirectory -TimeRangeMinutes $config.TimeRangeMinutes
+    $results = @()
+
+    foreach ($logFile in $logFiles) {
+        Test-LogFiles -LogFile $logFile.FullName
+        $logEntries = Read-LogFiles -LogFile $logFile.FullName
+        foreach ($logEntry in $logEntries) {
+            $analyzedEntry = Mount-LogEntry -LogEntry $logEntry
+            if ($analyzedEntry) {
+                $isSQLi = Test-SQLiAttack -LogEntry $analyzedEntry
+                if ($isSQLi) {
+                    $results += [PSCustomObject]@{
+                        LogEntry = $analyzedEntry
+                        Status   = "SQLi Detected"
+                    }
+                    Invoke-Alert -Message "SQLi detected in log entry: $analyzedEntry"
+                }
+            }
+        }
+    }
+
+    # Output Module
+    if ($results.Count -gt 0) {
+        $report = Export-CSVReport -Results $results
+        Save-CSVReport -Report $report -OutputDirectory $config.OutputDirectory
+    } else {
+        Write-Host "No SQLi attacks detected."
+    }
+} catch {
+    Start-HandleException -ErrorMessage $_
+}
