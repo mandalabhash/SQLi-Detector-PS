@@ -1,6 +1,3 @@
-Here's a comprehensive `README.md` for your GitHub repository:
-
-```markdown
 # IIS SQL Injection Monitor
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white)
@@ -106,22 +103,3 @@ MIT License - See [LICENSE](LICENSE) for details.
 ---
 
 **Contributions welcome!** Please open an issue or PR for any improvements to the detection patterns or functionality.
-```
-
-This README includes:
-
-1. **Visual badges** for quick recognition of tech stack
-2. **Clear installation instructions**
-3. **Parameter documentation**
-4. **Output format specification**
-5. **Technical implementation details**
-6. **Performance characteristics**
-7. **License information**
-
-You may want to:
-- Add actual screenshot of alerts (replace the imgur link)
-- Update the repository link
-- Add your contact info
-- Include any additional deployment notes specific to your environment
-
-The markdown is structured to be both visually appealing on GitHub and informative for security professionals who might use your tool.
