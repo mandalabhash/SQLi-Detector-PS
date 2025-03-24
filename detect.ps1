@@ -1,11 +1,4 @@
-<#
-.SYNOPSIS
-Monitors IIS logs for SQL injection attempts with CSV alert logging.
 
-.DESCRIPTION
-This script monitors IIS logs and logs alerts to sqli_alerts.csv with columns:
-Date, Time, IP Address, Payload
-#>
 
 param (
     [string]$LogDirectory = "C:\inetpub\logs\LogFiles\W3SVC2"
