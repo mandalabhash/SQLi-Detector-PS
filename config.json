@@ -1,5 +1,0 @@
-{
-    "LogDirectory": "C:\\inetpub\\logs\\LogFiles",
-    "OutputDirectory": "C:\\SQLi-Detection-Tool\\reports",
-    "TimeRangeMinutes": 15
-}
