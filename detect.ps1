@@ -1,5 +1,3 @@
-
-
 param (
     [string]$LogDirectory = "C:\inetpub\logs\LogFiles\W3SVC2"
 )
