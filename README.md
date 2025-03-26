@@ -78,8 +78,9 @@ The script detects:
 - And [12+ other techniques](https://owasp.org/www-community/attacks/SQL_Injection)
 
 ## Sample Alert
-![Alert Screenshot]![pic-1](https://github.com/user-attachments/assets/ca4be9c9-2bbb-47fd-b971-e28b1a082f5e)
-![pic-2](https://github.com/user-attachments/assets/224c1d62-b7e7-4cdc-b3b3-dbb722694ee6)
+![pic-1](https://github.com/user-attachments/assets/ca4be9c9-2bbb-47fd-b971-e28b1a082f5e)
+![pic-2 (Phone)](https://github.com/user-attachments/assets/7b0b1a43-e933-4587-83b0-8c0e1405bb35)
+
 
 
 ## Technical Details
