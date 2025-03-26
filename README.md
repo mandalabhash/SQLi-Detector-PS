@@ -65,6 +65,8 @@ Alerts are logged to `sqli_alerts.csv` with the following columns:
 | IP Address   | IPv4/IPv6           | 192.168.1.100 or ::1       |
 | Payload      | URL-decoded string  | `user=admin' OR 1=1--`     |
 
+![pic-3](https://github.com/user-attachments/assets/2b214b23-9c8b-4ac3-9a75-a3ec2ba495f5)
+
 ## Detection Patterns
 The script detects:
 - Basic SQLi patterns (`'`, `--`, `#`)
@@ -76,8 +78,9 @@ The script detects:
 - And [12+ other techniques](https://owasp.org/www-community/attacks/SQL_Injection)
 
 ## Sample Alert
-![Alert Screenshot](https://i.imgur.com/JQ7y3Fm.png)
-*(Example toast notification and console output)*
+![Alert Screenshot]![pic-1](https://github.com/user-attachments/assets/ca4be9c9-2bbb-47fd-b971-e28b1a082f5e)
+![pic-2](https://github.com/user-attachments/assets/224c1d62-b7e7-4cdc-b3b3-dbb722694ee6)
+
 
 ## Technical Details
 
